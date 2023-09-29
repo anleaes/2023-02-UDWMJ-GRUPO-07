@@ -1,4 +1,4 @@
-class category:
+class Category:
 
     def __init__ (self, id, name, description):
         self._id = id
