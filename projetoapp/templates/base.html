@@ -6,21 +6,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/35/35097.png" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .dropdown-menu{
+            background-color: #0cb9b3 ;
+            border: 1px solid black;
+            transition: .3s;
+        }
+        #dropdown05, #dropdown06{
+
+            font-size: 20px;
+            text-shadow: 1px 1px 0px black;
+        }
+        .dropdown-item{
+            color: white;
+            transition: .3s;
+        }
+        :hover.dropdown-item{
+            background-color: #ffd700;
+            color: black;
+            text-shadow: none;
+        }
+
+    </style>
     <title>{% block title %}SOS Bicharada Home{% endblock title %}</title>
 </head>
 <body>
  <!-- INICIO: Bloco do Bootstrap a ser incluido -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">SOS Bicharada</a>
+<nav class="navbar navbar-expand-lg" style="background: linear-gradient(45deg,#0cb9b3, #98f5f2); height: 100px; box-shadow: 0px 2px 0px black;">
+ <img src="https://cdn-icons-png.flaticon.com/512/35/35097.png" alt="logo" style="height: 90%; background-color: #ffd700; border-radius: 50px; margin-left: 20px; margin-right: 10px; border: 2px solid black;"> <a class="navbar-brand" style="color: #ffd700; font-weight: bolder; font-size: 32px; text-shadow: 1px 1px 0px black;" href="/">SOS Bicharada</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarsExample05">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Central de Ajuda a Animais</a>
+                <a class="nav-link dropdown-toggle" style="color: #ffd700;" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Central de Ajuda a Animais</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                     <a class="dropdown-item" href="#">Quero Adotar</a>
                     <a class="dropdown-item" href="#">Quero Doar</a>
@@ -29,7 +55,7 @@
             </li>
             
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ong</a>
+                <a class="nav-link dropdown-toggle" style="color: #ffd700;"href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ong</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                     <a class="dropdown-item" href="#">Cadastrar Ong</a>
                     <a class="dropdown-item" href="#">Lista de Ongs</a>
