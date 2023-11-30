@@ -42,14 +42,14 @@
             width: 250px;
             text-shadow: 1px 1px 0px black;
             color: #0cb9b3;
-            background-color: #ffd700;
+            background-color: transparent;
             border: 2px solid #0cb9b3;
             height: 60px;
 
         }
         #botao_doar:hover{
             color: black;
-            background-color: #dbba00;
+            background-color: #ffd700;
             text-shadow: none;
         }
 
@@ -72,8 +72,27 @@
             color: black;
             text-shadow: none;
         }
-        .dados_ong{
+        a{
+            color: #ffd700;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        a:hover{
+            text-decoration: none;
+            color: #0cb9b3;
+            transition: 0.3s;
+        }
+        h5{
+            color: white; 
+            text-align: center; 
+            font-size: 32px;
+        }
+
+        .label_txt{
             color: white;
+            font-size: 20px;
+            margin-top: 10px;
         }
 
         #botao_salvar{
@@ -90,6 +109,32 @@
             color: white;
             background-color: #0b928e;
             text-shadow: none;
+        }
+
+        .tabela{
+            background-color: #272727;
+            width: 100%;
+            max-width: 2000px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.842) ;
+        }
+        #num{
+            border-top: 2px solid rgb(180, 180, 180);
+            border-bottom: none;
+        }
+        tr{
+
+            padding: 10px 0;
+        }
+        th{
+            padding: 10px 0px 10px 20px;
+            border-bottom: 2px solid rgb(180, 180, 180);
+        }
+        td{
+            padding: 10px 0px 10px 20px;
+            border-top: 2px solid rgb(180, 180, 180);
         }
 
     </style>
