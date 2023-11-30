@@ -1,0 +1,10 @@
+#Ordem de cadastro das classes:
+
+#Ong > Doador > Veterinário > Adotante
+
+#O doador doa o animal para uma ong já registrada,
+#O animal passa pelo atendimento Veterinário,
+#O animal vai para Doacao,
+#O adotante adota o animal que está para Adocao
+
+
