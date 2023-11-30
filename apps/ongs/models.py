@@ -5,8 +5,8 @@ class Ong(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     name = models.CharField('Nome', max_length=50)
-    address = models.TextField('Endereco', max_length=100) 
-    phone = models.TextField('Telefone', max_length=20)
+    address = models.CharField('Endereço', max_length=50) 
+    phone = models.CharField('Telefone', max_length=11)
     
     class Meta:
         verbose_name = 'Ong'
