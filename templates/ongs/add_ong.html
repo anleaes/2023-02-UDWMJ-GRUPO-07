@@ -12,24 +12,25 @@
 
     <div class="container">
         <br />
-    <h5><b>Cadastro de Ongs</b></h5>
+    <h5 style="color: white;"><b>Cadastro de Ongs</b></h5>
         <div class="row">
             <div class ="col-md-12">
                 <form action="" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                   <label for="{{ form.name.id_for_label }}">Nome</label>
+                   <label class="dados_ong" for="{{ form.name.id_for_label }}">Nome</label>
                    {{ form.name|add_class:"form-control" }}
                 </div>
                 <div class="form-group">
-                    <label for="{{ form.address.id_for_label }}">Endereco</label>
+                    <label class="dados_ong" for="{{ form.address.id_for_label }}">Endereco</label>
                     {{ form.address|add_class:"form-control" }}
                  </div>
                  <div class="form-group">
-                    <label for="{{ form.phone.id_for_label }}">Telefone</label>
+                    <label class="dados_ong" for="{{ form.phone.id_for_label }}">Telefone</label>
                     {{ form.phone|add_class:"form-control" }}
                  </div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>       
+                 <br>
+                    <button id="botao_salvar" type="submit" class="btn btn-primary">Salvar</button>       
                 </form>
             </div>
         </div>
