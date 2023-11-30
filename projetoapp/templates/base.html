@@ -37,6 +37,7 @@
         }
 
         #botao_doar{
+            margin-right: 10px;
             margin-bottom: 20px;
             width: 250px;
             text-shadow: 1px 1px 0px black;
@@ -96,8 +97,8 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" style="color: #ffd700;"href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ong</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                    <a class="dropdown-item" href="#">Cadastrar Ong</a>
-                    <a class="dropdown-item" href="#">Lista de Ongs</a>
+                    <a class="dropdown-item" href="{% url 'ongs:add_ong' %}">Cadastrar Ong</a>
+                    <a class="dropdown-item" href="{% url 'ongs:list_ongs' %}">Lista de Ongs</a>
                 </div>
             </li>
         </ul>
