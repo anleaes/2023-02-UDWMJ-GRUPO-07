@@ -165,7 +165,7 @@
 </head>
 <body>
  <!-- INICIO: Bloco do Bootstrap a ser incluido -->
-<nav id="barra_nav" class="navbar navbar-expand-lg" href="/"> <img src="https://cdn-icons-png.flaticon.com/512/35/35097.png" alt="logo" class="imagem_logo"><a id="nome_header" class="navbar-brand">SOS Bicharada</a>
+<nav id="barra_nav" class="navbar navbar-expand-lg" href="/"> <img src="https://cdn-icons-png.flaticon.com/512/35/35097.png" alt="logo" class="imagem_logo"><a href="{% url 'core:home' %}" id="nome_header" class="navbar-brand">SOS Bicharada</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -174,7 +174,6 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" style="color: #ffd700;" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Doador</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                    <a class="dropdown-item" href="#"></a>
                     <a class="dropdown-item" href="{% url 'doadores:add_doador' %}">Quero Doar</a>
                     <a class="dropdown-item" href="{% url 'doadores:list_doadores' %}">Lista de Doadores</a>
                 </div>
