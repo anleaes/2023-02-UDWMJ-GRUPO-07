@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Veterinarios - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+        <h5><b>Lista de Veterinarios</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <br />
+                    <a href="{% url 'veterinarios:add_veterinario' %}">Cadastrar novo veterinario</a>
+                <br />
+                <br />
+                <table class="tabela">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CRM</th>
+                    <th scope="col">Data do Registro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for veterinario in veterinarios %}
+                        <tr>
+                            <th scope="row">{{ veterinario.id }}</th>
+                            <td>{{ veterinario.name }}</td>
+                            <td>{{ veterinario.crm }}</td>
+                            <td>{{ veterinario.register_date }}</td>
+                            <td>
+                                <a href="{% url 'veterinarios:edit_veterinario' veterinario.id %}" class="btn btn-primary btn-sm">Editar</a>
+                                <a href="{% url 'veterinarios:delete_veterinario' veterinario.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                            </td>
+                        </tr> 
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

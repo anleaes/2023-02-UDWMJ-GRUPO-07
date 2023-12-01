@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'core.apps.CoreConfig',
     'ongs.apps.OngsConfig',
+    'veterinarios.apps.VeterinariosConfig',
 ]
 
 MIDDLEWARE = [
