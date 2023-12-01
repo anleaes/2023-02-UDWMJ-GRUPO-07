@@ -8,3 +8,12 @@
 #O adotante adota o animal que está para Adocao
 
 
+#IMPORTANTE: Antes de fazer o commit, verificar os pycaches(incluindo o do migrations)
+#IMPORTANTE: Antes de fazer o commit, verificar os pycaches(incluindo o do migrations)
+#IMPORTANTE: Antes de fazer o commit, verificar os pycaches(incluindo o do migrations)
+#IMPORTANTE: Antes de fazer o commit, verificar os pycaches(incluindo o do migrations)
+#IMPORTANTE: Antes de fazer o commit, verificar os pycaches(incluindo o do migrations)
+#IMPORTANTE: Antes de fazer o commit, verificar os pycaches(incluindo o do migrations)
+#IMPORTANTE: Antes de fazer o commit, verificar os pycaches(incluindo o do migrations)
+#IMPORTANTE: Antes de fazer o commit, verificar os pycaches(incluindo o do migrations)
+#IMPORTANTE: Antes de fazer o commit, verificar os pycaches(incluindo o do migrations)
