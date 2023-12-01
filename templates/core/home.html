@@ -20,18 +20,18 @@
             <p style="display: block; margin-bottom: 30px; font-size: 20px;">Ao optar por adotar, você não está apenas dando um lar amoroso a um animal necessitado, mas está também contribuindo para um mundo mais compassivo e consciente.<p>
             <h4 style="font-weight: bold; text-align: center; color:#ffd700; margin-bottom: 20px; text-shadow: 2px 2px 10px #000000; ">Não compre, adote!</h3>
             <ul style="font-size: 19px; text-align: start;" >
-                <li style="margin-bottom: 10px;" >Diminui animais abandonados, oferecendo um lar amoroso.</li>
-                <li style="margin-bottom: 10px;">Proporciona oportunidade de recuperação para animais que sofreram.</li>
-                <li style="margin-bottom: 10px;">Protege animais de rua de perigos como acidentes e maus-tratos.</li>
-                <li style="margin-bottom: 10px;">Cria laços especiais com pets agradecidos e leais.</li>
-                <li style="margin-bottom: 10px;">Economiza ao incluir serviços veterinários na taxa de adoção.</li>
-                <li style="margin-bottom: 10px;">Abre espaço em abrigos para mais animais necessitados.</li>
-                <li style="margin-bottom: 10px;">Proporciona alegria ao oferecer uma vida melhor a animais abandonados.</li>
+                <li class="lista">Diminui animais abandonados, oferecendo um lar amoroso.</li>
+                <li class="lista">Proporciona oportunidade de recuperação para animais que sofreram.</li>
+                <li class="lista">Protege animais de rua de perigos como acidentes e maus-tratos.</li>
+                <li class="lista">Cria laços especiais com pets agradecidos e leais.</li>
+                <li class="lista">Economiza ao incluir serviços veterinários na taxa de adoção.</li>
+                <li class="lista">Abre espaço em abrigos para mais animais necessitados.</li>
+                <li class="lista">Proporciona alegria ao oferecer uma vida melhor a animais abandonados.</li>
             </ul>
             <br>
             <div style="text-align: center;" > 
                 <button type="button" id="botao_adotar" class="btn btn-primary">Quero adotar um animal</button>
-                <button type="button" id="botao_doar" class="btn btn-primary">Quero doar um animal</button>
+                <a href="{% url 'doadores:add_doador' %}"><button type="button" id="botao_doar" class="btn btn-primary">Quero doar um animal</button></a>
             </div>
         </div>
         <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">

@@ -58,7 +58,7 @@
             border: 2px solid #ffd700;
             transition: .3s;
         }
-        #dropdown05, #dropdown06{
+        #dropdown05, #dropdown06, #dropdown07{
 
             font-size: 20px;
             text-shadow: 1px 1px 0px black;
@@ -110,7 +110,30 @@
             background-color: #0b928e;
             text-shadow: none;
         }
-
+        #barra_nav{
+            background: linear-gradient(45deg,#0cb9b3, #98f5f2); 
+            height: 100px; 
+            box-shadow: 0px 2px 0px #ffd700; 
+            margin-bottom: 20px;
+        }
+        .imagem_logo{
+            height: 90%;
+            background-color: #ffd700;
+            border-radius: 50px;
+            margin-left: 20px;
+            margin-right: 10px;
+            border: 2px solid black;
+        }
+        #nome_header{
+            margin-right: 20px;
+            color: #ffd700;
+            font-weight: bolder;
+            font-size: 32px;
+            text-shadow: 1px 1px 0px black;
+        }
+        .lista{
+            margin-bottom: 10px;
+        }
         .tabela{
             background-color: #272727;
             width: 100%;
@@ -142,30 +165,30 @@
 </head>
 <body>
  <!-- INICIO: Bloco do Bootstrap a ser incluido -->
-<nav class="navbar navbar-expand-lg" style="background: linear-gradient(45deg,#0cb9b3, #98f5f2); height: 100px; box-shadow: 0px 2px 0px #ffd700; margin-bottom: 20px;">
- <img src="https://cdn-icons-png.flaticon.com/512/35/35097.png" alt="logo" style="height: 90%; background-color: #ffd700; border-radius: 50px; margin-left: 20px; margin-right: 10px; border: 2px solid black;"> <a class="navbar-brand" style="color: #ffd700; font-weight: bolder; font-size: 32px; text-shadow: 1px 1px 0px black;" href="/">SOS Bicharada</a>
+<nav id="barra_nav" class="navbar navbar-expand-lg" href="/"> <img src="https://cdn-icons-png.flaticon.com/512/35/35097.png" alt="logo" class="imagem_logo"><a id="nome_header" class="navbar-brand">SOS Bicharada</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarsExample05">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: #ffd700;" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Central de Ajuda a Animais</a>
+                <a class="nav-link dropdown-toggle" style="color: #ffd700;" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Doador</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
-                    <a class="dropdown-item" href="#">Quero Adotar</a>
-                    <a class="dropdown-item" href="#">Quero Doar</a>
+                    <a class="dropdown-item" href="#"></a>
+                    <a class="dropdown-item" href="{% url 'doadores:add_doador' %}">Quero Doar</a>
+                    <a class="dropdown-item" href="{% url 'doadores:list_doadores' %}">Lista de Doadores</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: #ffd700;"href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Veterinario</a>
+                <a class="nav-link dropdown-toggle" style="color: #ffd700;"href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Veterinário</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                     <a class="dropdown-item" href="{% url 'veterinarios:add_veterinario' %}">Sou Veterinário</a>
-                    <a class="dropdown-item" href="{% url 'veterinarios:list_veterinarios' %}">Lista de Veterinarios</a>
+                    <a class="dropdown-item" href="{% url 'veterinarios:list_veterinarios' %}">Lista de Veterinários</a>
                     <a class="dropdown-item" href="#">Atendimento Veterinário</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: #ffd700;"href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ong</a>
+                <a class="nav-link dropdown-toggle" style="color: #ffd700;"href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ong</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                     <a class="dropdown-item" href="{% url 'ongs:add_ong' %}">Cadastrar Ong</a>
                     <a class="dropdown-item" href="{% url 'ongs:list_ongs' %}">Lista de Ongs</a>

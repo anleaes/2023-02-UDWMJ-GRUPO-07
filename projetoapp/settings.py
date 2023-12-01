@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'ongs.apps.OngsConfig',
     'veterinarios.apps.VeterinariosConfig',
+    'doadores.apps.DoadoresConfig',
 ]
 
 MIDDLEWARE = [
