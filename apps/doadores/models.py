@@ -6,9 +6,9 @@ class Doador(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     name = models.CharField('Nome', max_length=50)
-    cpf = models.IntegerField('Cpf', max_length=11) 
+    cpf = models.CharField('Cpf', max_length=11)
     address = models.CharField('Endereco', max_length=50)
-    phone = models.IntegerField('Telefone', max_length=11) 
+    phone = models.CharField('Telefone', max_length=11)
     
     class Meta:
         verbose_name = 'Doador'

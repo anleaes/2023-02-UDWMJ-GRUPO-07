@@ -5,7 +5,7 @@ class Veterinario(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     name = models.CharField('Nome', max_length=50)
-    crm = models.CharField('Crm', max_length=50) 
+    crm = models.CharField('Crm', max_length=15) 
     register_date = models.DateField('Data')
     
     class Meta:
