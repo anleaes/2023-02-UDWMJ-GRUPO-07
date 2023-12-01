@@ -1,11 +1,11 @@
 db.sqlite3
 /projetoapp/__pycache__/*
 /apps/ongs/__pycache__/*
-/apps/ongs/migrations/*
+/apps/ongs/migrations/__pycache__/*
 /apps/core/__pycache__/*
-/apps/core/migrations/*
+/apps/core/migrations/__pycache__/*
 /apps/veterinarios/__pycache__/*
-/apps/veterinarios/migrations/*
+/apps/veterinarios/migrations/__pycache__/*
 /apps/doador/__pycache__/*
 /apps/doador/migrations/__pycache__/*
 /apps/adotante/__pycache__/*
