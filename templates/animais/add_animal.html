@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+
+    Adicionar Animal - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+    <h5><b>Cadastro de Animal</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <form action="" method="POST"> <!--enctype="multipart/form-data">-->
+                {% csrf_token %}
+                <div class="form-group">
+                   <label class="label_txt" for="{{ form.name.id_for_label }}">Nome</label>
+                   {{ form.name|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.sex.id_for_label }}">Sexo</label>
+                    {{ form.sex|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.years_old.id_for_label }}">Idade</label>
+                    {{ form.years_old|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.specie.id_for_label }}">Espécie</label>
+                    {{ form.specie|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.race.id_for_label }}">Raça</label>
+                    {{ form.race|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.color.id_for_label }}">Cor</label>
+                    {{ form.color|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.weight.id_for_label }}">Peso</label>
+                    {{ form.weight|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.height.id_for_label }}">Altura</label>
+                    {{ form.height|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.adoption_status.id_for_label }}">Status adoção</label>
+                    {{ form.adoption_status|add_class:"form-control" }}
+                </div>
+                <!--<div class="form-group">
+                    <label class="label_txt" for="{{ form.ong.id_for_label }}">Ong</label>
+                    {{ form.ong|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.doador.id_for_label }}">Doador</label>
+                    {{ form.doador|add_class:"form-control" }}
+                </div>-->
+                    <button id="botao_salvar" type="submit" class="btn btn-primary">Salvar</button>       
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>   
+        document.addEventListener("DOMContentLoaded", function () {
+            var years_oldInput = document.getElementById("id_years_old");
+    
+            years_oldInput.addEventListener("input", function () {
+                years_oldInput.value = years_oldInput.value.replace(/\D/g, "");
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var weightInput = document.getElementById("id_weight");
+    
+            weightInput.addEventListener("input", function () {
+                weightInput.value = weightInput.value.replace(/\D/g, "");
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var heightInput = document.getElementById("id_height");
+    
+            heightInput.addEventListener("input", function () {
+                heightInput.value = heightInput.value.replace(/\D/g, "");
+            });
+        });
+    </script>
+
+{% endblock body %}
