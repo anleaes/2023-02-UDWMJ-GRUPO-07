@@ -58,7 +58,7 @@
             border: 2px solid #ffd700;
             transition: .3s;
         }
-        #dropdown05, #dropdown06, #dropdown07{
+        #dropdown05, #dropdown06, #dropdown07, #dropdown08, #dropdown09{
 
             font-size: 20px;
             text-shadow: 1px 1px 0px black;
@@ -172,7 +172,7 @@
     <div class="collapse navbar-collapse" id="navbarsExample05">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: #ffd700;" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Adotante</a>
+                <a class="nav-link dropdown-toggle" style="color: #ffd700;" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Adotante</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                     <a class="dropdown-item" href="{% url 'adotantes:add_adotante' %}">Quero Adotar</a>
                     <a class="dropdown-item" href="{% url 'adotantes:list_adotantes' %}">Lista de Adotantes</a>
@@ -198,6 +198,13 @@
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                     <a class="dropdown-item" href="{% url 'ongs:add_ong' %}">Cadastrar Ong</a>
                     <a class="dropdown-item" href="{% url 'ongs:list_ongs' %}">Lista de Ongs</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #ffd700;"href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expand="false">Animais</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                    <a class="dropdown-item" href="{% url 'animais:add_animal' %}">Cadastrar animal</a>
+                    <a class="dropdown-item" href="{% url 'animais:list_animais' %}">Lista de Animais</a>
                 </div>
             </li>
         </ul>

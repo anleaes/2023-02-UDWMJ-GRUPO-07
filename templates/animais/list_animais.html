@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Animais - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+        <h5><b>Lista de Animais</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <br />
+                    <a href="{% url 'animais:add_animal' %}">Cadastro de Animal</a>
+                <br />
+                <br />
+                <table class="tabela">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col">Espécie</th>
+                    <th scope="col">Raça</th>
+                    <th scope="col">Cor</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Altura</th>
+                    <th scope="col">Status adoção</th>
+                    <!--<th scope="col">Ong</th>
+                    <th scope="col">Doador</th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for animal in animais %}
+                        <tr>
+                            <th id="num" scope="row">{{ animal.id }}</th>
+                            <td>{{ animal.name }}</td>
+                            <td>{{ animal.sex }}</td>
+                            <td>{{ animal.years_old }}</td>
+                            <td>{{ animal.specie }}</td>
+                            <td>{{ animal.race }}</td>
+                            <td>{{ animal.color }}</td>
+                            <td>{{ animal.weight }}</td>
+                            <td>{{ animal.height }}</td>
+                            <td>{{ animal.adoption_status }}</td>
+                            <!--<td>{{ animal.ong }}</td>
+                            <td>{{ animal.doador }}</td>-->
+                            <td>
+                                <a href="{% url 'animais:edit_animal' animal.id %}" class="btn btn-primary btn-sm">Editar</a>
+                            </td>
+                            <td>    
+                                <a href="{% url 'animais:delete_animal' animal.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                            </td>
+                        </tr> 
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
