@@ -2,7 +2,7 @@
 
 {% block title %}
 
-    Lista de Ongs - {{ block.super }}
+    Lista de Adotantes - {{ block.super }}
 
 {% endblock title %}
 
@@ -10,11 +10,11 @@
 
     <div class="container">
         <br />
-        <h5><b>Lista de Ongs</b></h5>
+        <h5><b>Lista de Adotantes</b></h5>
         <div class="row">
             <div class ="col-md-12">
                 <br />
-                    <a href="{% url 'ongs:add_ong' %}">Cadastrar nova Ong</a>
+                    <a href="{% url 'adotantes:add_adotante' %}">Cadastro de novo Adotante</a>
                 <br />
                 <br />
                 <table class="tabela">
@@ -22,23 +22,24 @@
                     <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
                     <th scope="col">Endereço</th>
                     <th scope="col">Telefone</th>
-                    <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for ong in ongs %}
+                    {% for adotante in adotantes %}
                         <tr>
-                            <th id="num" scope="row">{{ ong.id }}</th>
-                            <td>{{ ong.name }}</td>
-                            <td>{{ ong.address }}</td>
-                            <td>{{ ong.phone }}</td>
+                            <th id="num" scope="row">{{ adotante.id }}</th>
+                            <td>{{ adotante.name }}</td>
+                            <td>{{ adotante.cpf }}</td>
+                            <td>{{ adotante.address }}</td>
+                            <td>{{ adotante.phone }}</td>
                             <td>
-                                <a href="{% url 'ongs:edit_ong' ong.id %}" class="btn btn-primary btn-sm">Editar</a>
+                                <a href="{% url 'adotantes:edit_adotante' adotante.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>
                             <td>
-                                <a href="{% url 'ongs:delete_ong' ong.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                                <a href="{% url 'adotantes:delete_adotante' adotante.id %}" class="btn btn-danger btn-sm ">Excluir</a>
                             </td>
                         </tr> 
                     {% endfor %}
