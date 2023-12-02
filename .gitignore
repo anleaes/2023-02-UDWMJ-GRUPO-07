@@ -8,8 +8,8 @@ db.sqlite3
 /apps/veterinarios/migrations/__pycache__/*
 /apps/doadores/__pycache__/*
 /apps/doadores/migrations/__pycache__/*
-/apps/adotante/__pycache__/*
-/apps/adotante/migrations/__pycache__/*
+/apps/adotantes/__pycache__/*
+/apps/adotantes/migrations/__pycache__/*
 /apps/adocao/__pycache__/*
 /apps/adocao/migrations/__pycache__/*
 /apps/adocao_animal/__pycache__/*

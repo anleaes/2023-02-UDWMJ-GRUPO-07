@@ -172,6 +172,13 @@
     <div class="collapse navbar-collapse" id="navbarsExample05">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #ffd700;" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Adotante</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                    <a class="dropdown-item" href="{% url 'adotantes:add_adotante' %}">Quero Adotar</a>
+                    <a class="dropdown-item" href="{% url 'adotantes:list_adotantes' %}">Lista de Adotantes</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" style="color: #ffd700;" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Doador</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                     <a class="dropdown-item" href="{% url 'doadores:add_doador' %}">Quero Doar</a>

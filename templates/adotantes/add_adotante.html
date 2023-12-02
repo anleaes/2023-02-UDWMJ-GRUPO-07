@@ -1,0 +1,60 @@
+
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+
+    Adicionar Adotante - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+    <h5><b>Cadastro de Adotante</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                   <label class="label_txt" for="{{ form.name.id_for_label }}">Nome</label>
+                   {{ form.name|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.description.id_for_label }}">CPF</label>
+                    {{ form.cpf|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label class="label_txt" for="{{ form.name.id_for_label }}">Endereço</label>
+                    {{ form.address|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label class="label_txt" for="{{ form.name.id_for_label }}">Telefone</label>
+                    {{ form.phone|add_class:"form-control" }}
+                 </div>
+                    <button id="botao_salvar" type="submit" class="btn btn-primary">Salvar</button>       
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var cpfInput = document.getElementById("id_cpf");
+
+        cpfInput.addEventListener("input", function () {
+            cpfInput.value = cpfInput.value.replace(/\D/g, "");
+        });
+    });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var phoneInput = document.getElementById("id_phone");
+
+        phoneInput.addEventListener("input", function () {
+            phoneInput.value = phoneInput.value.replace(/\D/g, "");
+        });
+    });
+    </script>
+{% endblock body %}
