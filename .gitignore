@@ -10,11 +10,11 @@ db.sqlite3
 /apps/doadores/migrations/__pycache__/*
 /apps/adotantes/__pycache__/*
 /apps/adotantes/migrations/__pycache__/*
-/apps/adocao/__pycache__/*
-/apps/adocao/migrations/__pycache__/*
+/apps/adocoes/__pycache__/*
+/apps/adocoes/migrations/__pycache__/*
 /apps/adocao_animal/__pycache__/*
 /apps/adocao_animal/migrations/__pycache__/*
 /apps/animais/__pycache__/*
 /apps/animais/migrations/__pycache__/*
-/apps/atendimento/__pycache__/*
-/apps/atendimento/migrations/__pycache__/*
+/apps/atendimentos/__pycache__/*
+/apps/atendimentos/migrations/__pycache__/*

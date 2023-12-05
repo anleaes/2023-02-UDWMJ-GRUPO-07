@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Adoções - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+        <h5><b>Lista de Adoções</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <br />
+                    <a href="{% url 'adocoes:add_adocao' %}">Cadastro de Adoção</a>
+                <br />
+                <br />
+                <table class="tabela">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Status</th>
+                    <!--<th scope="col">Adotante</th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for adocao in adocoes %}
+                        <tr>
+                            <th id="num" scope="row">{{ adocao.id }}</th>
+                            <td>{{ adocao.date }}</td>
+                            <td>{{ adocao.hour }}</td>
+                            <td>{{ adocao.status }}</td>
+                            <!--<td>{{ adocao.adotante }}</td>-->
+                            <td>
+                                <a href="{% url 'adocoes:edit_adocao' adocao.id %}" class="btn btn-primary btn-sm">Editar</a>
+                            </td>
+                            <td>    
+                                <a href="{% url 'adocoes:delete_adocao' adocao.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                            </td>
+                        </tr> 
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
