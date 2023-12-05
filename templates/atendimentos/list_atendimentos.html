@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Atendimentos - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+        <h5><b>Lista de Atendimentos</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <br />
+                    <a href="{% url 'atendimentos:add_atendimento' %}">Cadastro de Atendimento</a>
+                <br />
+                <br />
+                <table class="tabela">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Motivo</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Medicamento</th>
+                    <th scope="col">Vacina</th>
+                    <!--<th scope="col">Animal</th>
+                    <th scope="col">Veterinário</th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for atendimento in atendimentos %}
+                        <tr>
+                            <th id="num" scope="row">{{ atendimento.id }}</th>
+                            <td>{{ atendimento.reason }}</td>
+                            <td>{{ atendimento.description }}</td>
+                            <td>{{ atendimento.medicine }}</td>
+                            <td>{{ atendimento.vaccine }}</td>
+                            <!--<td>{{ atendimento.animal }}</td>
+                            <td>{{ atendimento.veterinary }}</td>-->
+                            <td>
+                                <a href="{% url 'atendimentos:edit_atendimento' atendimento.id %}" class="btn btn-primary btn-sm">Editar</a>
+                            </td>
+                            <td>    
+                                <a href="{% url 'atendimentos:delete_atendimento' atendimento.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                            </td>
+                        </tr> 
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
