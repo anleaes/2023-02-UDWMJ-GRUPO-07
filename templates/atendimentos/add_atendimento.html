@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+
+    Adicionar Atendimento - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+    <h5><b>Cadastro de Atendimento</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <form action="" method="POST"> <!--enctype="multipart/form-data"> -->
+                {% csrf_token %}
+                <div class="form-group">
+                   <label class="label_txt" for="{{ form.reason.id_for_label }}">Motivo</label>
+                   {{ form.reason|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.description.id_for_label }}">Descrição</label>
+                    {{ form.description|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.medicine.id_for_label }}">Medicamento</label>
+                    {{ form.medicine|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.vaccine.id_for_label }}">Vacina</label>
+                    {{ form.vaccine|add_class:"form-control" }}
+                </div>
+                <!--<div class="form-group">
+                    <label class="label_txt" for="{{ form.animal.id_for_label }}">Animal</label>
+                    {{ form.animal|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label class="label_txt" for="{{ form.vererinary.id_for_label }}">Veterinário</label>
+                    {{ form.vererinary|add_class:"form-control" }}
+                </div>-->
+                    <button type="submit" class="btn btn-primary">Salvar</button>       
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
