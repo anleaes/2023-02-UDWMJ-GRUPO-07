@@ -58,8 +58,7 @@
             border: 2px solid #ffd700;
             transition: .3s;
         }
-        #dropdown05, #dropdown06, #dropdown07, #dropdown08, #dropdown09, #dropdown10{
-
+        #dropdown05, #dropdown06, #dropdown07, #dropdown08, #dropdown09, #dropdown10, #dropdown11{
             font-size: 20px;
             text-shadow: 1px 1px 0px black;
         }
@@ -212,6 +211,13 @@
                 <div class="dropdown-menu" aria-labelledby="dropdown05">
                     <a class="dropdown-item" href="{% url 'atendimentos:add_atendimento' %}">Cadastrar Atendimento</a>
                     <a class="dropdown-item" href="{% url 'atendimentos:list_atendimentos' %}">Lista de Atendimentos</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #ffd700;"href="#" id="dropdown11" data-toggle="dropdown" aria-haspopup="true" aria-expand="false">Adoção</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                    <a class="dropdown-item" href="{% url 'adocoes:add_adocao' %}">Cadastrar Adoção</a>
+                    <a class="dropdown-item" href="{% url 'adocoes:list_adocoes' %}">Lista de Adoções</a>
                 </div>
             </li>
         </ul>

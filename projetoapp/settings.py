@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'adotantes.apps.AdotantesConfig',
     'animais.apps.AnimaisConfig',
     'atendimentos.apps.AtendimentosConfig',
+    'adocoes.apps.AdocoesConfig',
 ]
 
 MIDDLEWARE = [

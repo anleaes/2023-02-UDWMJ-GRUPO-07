@@ -1,0 +1,7 @@
+from django.apps import AppConfig
+
+
+class AdocoesConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'adocoes'
+    verbose_name = 'Adocoes'
