@@ -11,8 +11,8 @@ class Atendimento(models.Model):
     description = models.CharField('Descricao', max_length=50)
     medicine = models.CharField('Medicamento', max_length=15)
     vaccine = models.CharField('Vacina', max_length=15)
-    #animal = models.ForeignKey(Animal, on_delete=models.CASCADE)
-    #veterinary = models.ForeignKey(Veterinario, on_delete=models.CASCADE)
+    animal = models.ForeignKey(Animal, on_delete=models.CASCADE, default=1)
+    veterinary = models.ForeignKey(Veterinario, on_delete=models.CASCADE, default=1)
     
     
     class Meta:

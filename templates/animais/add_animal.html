@@ -25,9 +25,15 @@
                     <label class="label_txt" for="{{ form.sex.id_for_label }}">Sexo</label>
                     {{ form.sex|add_class:"form-control campotxt-style" }}
                 </div>
-                <div class="form-group">
-                    <label class="label_txt" for="{{ form.years_old.id_for_label }}">Idade</label>
-                    {{ form.years_old|add_class:"form-control campotxt-style" }}
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label class="label_txt" for="{{ form.years_old_value.id_for_label }}">Idade</label>
+                        {{ form.years_old_value|add_class:"form-control campotxt-style" }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label_txt" for="{{ form.years_old_unit.id_for_label }}">Selecione</label>
+                        {{ form.years_old_unit|add_class:"form-control campotxt-style" }}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label class="label_txt" for="{{ form.specie.id_for_label }}">Espécie</label>
@@ -41,17 +47,25 @@
                     <label class="label_txt" for="{{ form.color.id_for_label }}">Cor</label>
                     {{ form.color|add_class:"form-control campotxt-style" }}
                 </div>
-                <div class="form-group">
-                    <label class="label_txt" for="{{ form.weight.id_for_label }}">Peso</label>
-                    {{ form.weight|add_class:"form-control campotxt-style" }}
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label class="label_txt" for="{{ form.weight_value.id_for_label }}">Peso</label>
+                        {{ form.weight_value|add_class:"form-control campotxt-style" }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label_txt" for="{{ form.weight_unit.id_for_label }}">Selecione</label>
+                        {{ form.weight_unit|add_class:"form-control campotxt-style" }}
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label class="label_txt" for="{{ form.height.id_for_label }}">Altura</label>
-                    {{ form.height|add_class:"form-control campotxt-style" }}
-                </div>
-                <div class="form-group">
-                    <label class="label_txt" for="{{ form.adoption_status.id_for_label }}">Status adoção</label>
-                    {{ form.adoption_status|add_class:"form-control campotxt-style" }}
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label class="label_txt" for="{{ form.height_value.id_for_label }}">Altura</label>
+                        {{ form.height_value|add_class:"form-control campotxt-style" }}
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label_txt" for="{{ form.height_unit.id_for_label }}">Selecione</label>
+                        {{ form.height_unit|add_class:"form-control campotxt-style" }}
+                    </div>
                 </div>
                 <!--<div class="form-group">
                     <label class="label_txt" for="{{ form.ong.id_for_label }}">Ong</label>
