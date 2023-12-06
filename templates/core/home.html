@@ -7,39 +7,39 @@
 {% block body %}
 <!-- Codigo html especifico desse arquivo -->
 
-<main style="padding: 0px 20px;">
-    <h1 style="text-align: center; color:#0cb9b3; font-weight: bold; margin-bottom: 20px; text-shadow: 2px 2px 10px #000000; ">Bem-vindo! <br>Este é um espaço dedicado à adoção responsável de animais </h1>
-    <section style="width: 100%; max-width: auto; padding:0 10px; margin: 0 auto; display: flex; justify-content: space-between; flex-direction: row; color: white;">
-        <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
-            <img src="https://www.petelegante.com.br/media/dicas/ado%C3%A7%C3%A3o-de-cachorro-filhote.jpg" style="width: 400px; height: 210px; object-fit: cover; margin: 0px 0px 10px 0px;border: 2px solid #ffd700"class="rounded float-start" alt="...">
-            <img src="https://blog-static.petlove.com.br/wp-content/uploads/2021/08/gato-filhote-gaiola-petlove.jpg" style="width: 400px; height: 210px; object-fit: cover; margin: 0px 0px 10px 0px; border: 2px solid #0cb9b3 ;"class="rounded float-start" alt="...">
-            <img src="https://clubepaineiras.org.br/wp-content/uploads/2022/03/iStock-1156708018-scaled.jpg" style="width: 400px; height: 210px; object-fit: cover; border: 2px solid #ffd700" class="rounded float-start" alt="...">
+<main>
+    <h1 id="titulo_home" >Bem-vindo! <br>Este é um espaço dedicado à adoção responsável de animais </h1>
+    <section class="section_home">
+        <div class="conj_imgs">
+            <img src="https://www.petelegante.com.br/media/dicas/ado%C3%A7%C3%A3o-de-cachorro-filhote.jpg" id="img_esq_1" class="rounded float-start" alt="Cachorro caramelo olhando para câmera">
+            <img src="https://blog-static.petlove.com.br/wp-content/uploads/2021/08/gato-filhote-gaiola-petlove.jpg" id="img_esq_2" class="rounded float-start" alt="Dois gatos filhotes olhando para câmera">
+            <img src="https://clubepaineiras.org.br/wp-content/uploads/2022/03/iStock-1156708018-scaled.jpg" id="img_esq_3" class="rounded float-start" alt="Cachorro preto olhando para câmera">
         </div>
-        <div style="padding: 10px 1.5rem 0 1.5rem; text-align: justify;">
-            <h3 style="font-weight: bold; text-align: center; color: #ffd700; margin-bottom: 18px; text-shadow: 2px 2px 10px #000000;" >Por que adotar é a melhor escolha?</h2>
-            <p style="display: block; margin-bottom: 30px; font-size: 20px;">Ao optar por adotar, você não está apenas dando um lar amoroso a um animal necessitado, mas está também contribuindo para um mundo mais compassivo e consciente.<p>
-            <h4 style="font-weight: bold; text-align: center; color:#ffd700; margin-bottom: 20px; text-shadow: 2px 2px 10px #000000; ">Não compre, adote!</h3>
-            <ul style="font-size: 19px; text-align: start;" >
-                <li class="lista">Diminui animais abandonados, oferecendo um lar amoroso.</li>
-                <li class="lista">Proporciona oportunidade de recuperação para animais que sofreram.</li>
-                <li class="lista">Protege animais de rua de perigos como acidentes e maus-tratos.</li>
-                <li class="lista">Cria laços especiais com pets agradecidos e leais.</li>
-                <li class="lista">Economiza ao incluir serviços veterinários na taxa de adoção.</li>
-                <li class="lista">Abre espaço em abrigos para mais animais necessitados.</li>
-                <li class="lista">Proporciona alegria ao oferecer uma vida melhor a animais abandonados.</li>
-            </ul>
-            <br>
-            <div style="text-align: center;" > 
-                <button type="button" id="botao_adotar" class="btn btn-primary">Quero adotar um animal</button>
+        <div id="conteudo_home">
+            <div id="conteudo_home_container">
+                <h3 id="subtitulo_home">Por que adotar é a melhor escolha?</h2>
+                <p>Ao optar por adotar, você não está apenas dando um lar amoroso a um animal necessitado, mas está também contribuindo para um mundo mais compassivo e consciente.<p>
+                <h4 id="subtitulo2_home">Não compre, adote!</h3>
+                <ul id="conj_lista">
+                    <li class="lista">Diminui animais abandonados, oferecendo um lar amoroso.</li>
+                    <li class="lista">Proporciona oportunidade de recuperação para animais que sofreram.</li>
+                    <li class="lista">Protege animais de rua de perigos como acidentes e maus-tratos.</li>
+                    <li class="lista">Cria laços especiais com pets agradecidos e leais.</li>
+                    <li class="lista">Economiza ao incluir serviços veterinários na taxa de adoção.</li>
+                    <li class="lista">Abre espaço em abrigos para mais animais necessitados.</li>
+                    <li class="lista">Proporciona alegria ao oferecer uma vida melhor a animais abandonados.</li>
+                </ul>
+            </div>
+            <div id="conj_botao_home"> 
+                <a href="{% url 'adotantes:add_adotante' %}"><button type="button" id="botao_adotar" class="btn btn-primary">Quero adotar um animal</button></a>
                 <a href="{% url 'doadores:add_doador' %}"><button type="button" id="botao_doar" class="btn btn-primary">Quero doar um animal</button></a>
             </div>
         </div>
-        <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
-            <img src="https://adotar.com.br/painel/upload/2023-07/animais_imagem1020481.jpg"  style="width: 400px; height: 210px; object-fit: cover; margin: 0px 0px 10px 0px; border: 2px solid #0cb9b3"class="rounded float-end" alt="...">
-            <img src="https://www.patasdacasa.com.br/sites/default/files/styles/webp/public/noticias/2022/05/adocao-de-cachorro-tudo-que-voce-precisa-saber-e-se-preocupar-antes-de-levar-um-pet-para-casa_0.jpg.webp?itok=KQVwN7k-"  style="width: 400px; height: 210px; object-fit: cover; margin: 0px 0px 10px 0px; border: 2px solid #ffd700"class="rounded float-end" alt="...">
-            <img src="https://i.pinimg.com/736x/4d/2f/cc/4d2fcc6fffd63490b3f20d5c8157e5aa.jpg"  style="width: 400px; height: 210px; object-fit: cover; border: 2px solid #0cb9b3;" class="rounded float-end" alt="...">
+        <div class="conj_imgs">
+            <img src="https://adotar.com.br/painel/upload/2023-07/animais_imagem1020481.jpg" id="img_dir_1" class="rounded float-end" alt="Gato frajola adulto olhando para câmera">
+            <img src="https://www.patasdacasa.com.br/sites/default/files/styles/webp/public/noticias/2022/05/adocao-de-cachorro-tudo-que-voce-precisa-saber-e-se-preocupar-antes-de-levar-um-pet-para-casa_0.jpg.webp?itok=KQVwN7k-" id="img_dir_2" class="rounded float-end" alt="Cachorro filhote no centro da imagem, ao lado de três outros cachorros ao desfoque">
+            <img src="https://i.pinimg.com/736x/4d/2f/cc/4d2fcc6fffd63490b3f20d5c8157e5aa.jpg"  id="img_dir_3" class="rounded float-end" alt="Gato preto olhando para câmera ao centro da imagem">
         </div>
     </section>
-
 </main>
 {% endblock body %}
