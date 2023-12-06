@@ -1,10 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var years_oldInput = document.getElementById("id_years_old");
+document.addEventListener('DOMContentLoaded', function () {
+    var yearsOldValueInput = document.getElementById('id_years_old_value');
 
-    years_oldInput.addEventListener("input", function () {
-        years_oldInput.value = years_oldInput.value.replace(/\D/g, "");
+    yearsOldValueInput.addEventListener('input', function () {
+        var inputValue = parseInt(yearsOldValueInput.value, 10);
+
+        if (isNaN(inputValue) || inputValue < 0) {
+            yearsOldValueInput.value = '';  
+        } else if (inputValue > 25) {
+            yearsOldValueInput.value = '25';  
+        }
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     var weightInput = document.getElementById("id_weight");

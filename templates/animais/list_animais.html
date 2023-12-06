@@ -29,7 +29,6 @@
                     <th scope="col">Cor</th>
                     <th scope="col">Peso</th>
                     <th scope="col">Altura</th>
-                    <th scope="col">Status adoção</th>
                     <!--<th scope="col">Ong</th>
                     <th scope="col">Doador</th>-->
                     </tr>
@@ -40,13 +39,32 @@
                             <th id="num" scope="row">{{ animal.id }}</th>
                             <td>{{ animal.name }}</td>
                             <td>{{ animal.sex }}</td>
-                            <td>{{ animal.years_old }}</td>
+                            <td>
+                                {{ animal.years_old_value }}
+                                {% if animal.years_old_unit == 'anos' %}
+                                    a
+                                {% else %}
+                                    m
+                                {% endif %}
+                            </td>
                             <td>{{ animal.specie }}</td>
                             <td>{{ animal.race }}</td>
                             <td>{{ animal.color }}</td>
-                            <td>{{ animal.weight }}</td>
-                            <td>{{ animal.height }}</td>
-                            <td>{{ animal.adoption_status }}</td>
+                            <td>
+                                {{ animal.weight_value }}
+                                {% if animal.weight_unit == 'quilos' %}
+                                    kg
+                                {% else %}
+                                    g
+                                {% endif %}
+                            </td>
+                            <td>{{ animal.height_value }}
+                                {% if animal.height_unit == 'metros' %}
+                                    m
+                                {% else %}
+                                    cm
+                                {% endif %}
+                            </td>
                             <!--<td>{{ animal.ong }}</td>
                             <td>{{ animal.doador }}</td>-->
                             <td>

@@ -25,8 +25,8 @@
                     <th scope="col">Descrição</th>
                     <th scope="col">Medicamento</th>
                     <th scope="col">Vacina</th>
-                    <!--<th scope="col">Animal</th>
-                    <th scope="col">Veterinário</th>-->
+                    <th scope="col">Nome</th>
+                    <th scope="col">Veterinário</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,8 +37,8 @@
                             <td>{{ atendimento.description }}</td>
                             <td>{{ atendimento.medicine }}</td>
                             <td>{{ atendimento.vaccine }}</td>
-                            <!--<td>{{ atendimento.animal }}</td>
-                            <td>{{ atendimento.veterinary }}</td>-->
+                            <td>{{ atendimento.animal }}</td>
+                            <td>{{ atendimento.veterinary }}</td>
                             <td>
                                 <a href="{% url 'atendimentos:edit_atendimento' atendimento.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>
