@@ -19,21 +19,21 @@
                 {% csrf_token %}
                 <div class="form-group">
                    <label class="label_txt" for="{{ form.date.id_for_label }}">Data</label>
-                   {{ form.date|add_class:"form-control" }}
+                   {{ form.date|add_class:"form-control campotxt-style" }}
                 </div>
                 <div class="form-group">
                     <label class="label_txt" for="{{ form.hour.id_for_label }}">Hora</label>
-                    {{ form.hour|add_class:"form-control" }}
+                    {{ form.hour|add_class:"form-control campotxt-style" }}
                 </div>
                 <div class="form-group">
                     <label class="label_txt" for="{{ form.status.id_for_label }}">Status</label>
-                    {{ form.status|add_class:"form-control" }}
+                    {{ form.status|add_class:"form-control campotxt-style" }}
                 </div>
                 <!--<div class="form-group">
                     <label class="label_txt" for="{{ form.adotante.id_for_label }}">Adotante</label>
                     {{ form.adotante|add_class:"form-control" }}
                 </div>-->
-                    <button type="submit" class="btn btn-primary">Salvar</button>       
+                    <button id="botao_salvar" type="submit" class="btn btn-primary">Salvar</button>       
                 </form>
             </div>
         </div>

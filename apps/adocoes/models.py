@@ -17,4 +17,4 @@ class Adocao(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return self.hour
+        return self.status
