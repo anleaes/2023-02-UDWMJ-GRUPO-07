@@ -7,7 +7,7 @@ class Adocao(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     date = models.DateField('Data')
-    hour = models.CharField('Hora', max_length=5)
+    time = models.CharField('Hora', max_length=5)
     status = models.CharField('Status', max_length=10) 
     #adotante = models.ForeignKey(Adotante, on_delete=models.CASCADE)
     
