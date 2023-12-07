@@ -80,6 +80,10 @@
                     <a class="dropdown-item" href="{% url 'adocaoanimais:list_adocaoanimais' %}">Lista de Adoções</a>
                 </div>
             </li>
+            <form action="{% url 'animais:search_animais' %}"  method="GET" class="form-inline my-2 my-md-0" style="margin-right: 10px">
+                <input class="form-control" name="query" type="text" placeholder="Nome do animal" aria-label="Buscar" style="margin-right: 10px">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
         </ul>
     </div>
 </nav>
