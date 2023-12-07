@@ -17,22 +17,18 @@
                     <a href="{% url 'adocaoanimais:add_adocaoanimal' %}">Cadastro de nova Adoção de Animal</a>
                 <br />
                 <br />
-                <table class="table table-hover">
+                <table class="tabela">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nome do animal</th>
-                    <th scope="col">Espécie</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">Nome do animal - Espécie - Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for adocaoanimal in adocaoanimais %}
                         <tr>
-                            <th scope="row">{{ adocaoanimal.id }}</th>
+                            <th id="num" scope="row">{{ adocaoanimal.id }}</th>
                             <td>{{ adocaoanimal.animal }}</td>
-                            <td>{{ adocaoanimal.animal }}</td>
-                            <td>{{ adocaoanimal.adoption }}</td>
                             <td>
                                 <a href="{% url 'adocaoanimais:edit_adocaoanimal' adocaoanimal.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>
