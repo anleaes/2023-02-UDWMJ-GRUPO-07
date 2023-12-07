@@ -45,8 +45,8 @@ class Animal(models.Model):
         ('metros', 'Metros'),
     ], default= 'metros')
 
-    #ong = models.ForeignKey(Ong, on_delete=models.CASCADE)
-    #donator = models.ForeignKey(Doador, on_delete=models.CASCADE)
+    ong = models.ForeignKey(Ong, on_delete=models.CASCADE, default=1)
+    donator = models.ForeignKey(Doador, on_delete=models.CASCADE, default=1)
 
     @property
     def formatted_years_old(self):
