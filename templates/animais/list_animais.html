@@ -29,8 +29,8 @@
                     <th scope="col">Cor</th>
                     <th scope="col">Peso</th>
                     <th scope="col">Altura</th>
-                    <!--<th scope="col">Ong</th>
-                    <th scope="col">Doador</th>-->
+                    <th scope="col">Ong</th>
+                    <th scope="col">Doador</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,8 +65,8 @@
                                     cm
                                 {% endif %}
                             </td>
-                            <!--<td>{{ animal.ong }}</td>
-                            <td>{{ animal.doador }}</td>-->
+                            <td>{{ animal.ong }}</td>
+                            <td>{{ animal.donator }}</td>
                             <td>
                                 <a href="{% url 'animais:edit_animal' animal.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>
