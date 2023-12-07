@@ -38,7 +38,7 @@
                         <tr>
                             <th id="num" scope="row">{{ animal.id }}</th>
                             <td>{{ animal.name }}</td>
-                            <td>{{ animal.sex }}</td>
+                            <td>{{ animal.get_sex_display }}</td>
                             <td>
                                 {{ animal.years_old_value }}
                                 {% if animal.years_old_unit == 'anos' %}
@@ -47,7 +47,7 @@
                                     m
                                 {% endif %}
                             </td>
-                            <td>{{ animal.specie }}</td>
+                            <td>{{ animal.get_specie_display }}</td>
                             <td>{{ animal.race }}</td>
                             <td>{{ animal.color }}</td>
                             <td>

@@ -16,7 +16,7 @@ class Animal(models.Model):
 
     sex = models.CharField('Sexo', max_length=5, choices=SEX_CHOICES, default='macho')
 
-    years_old_value = models.PositiveIntegerField('Idade', default= 0.0)
+    years_old_value = models.PositiveIntegerField('Idade', default= 0)
 
     years_old_unit = models.CharField('Unidade de Idade', max_length=10, choices=[
         ('anos', 'Anos'),
