@@ -33,13 +33,13 @@ class Animal(models.Model):
     race = models.CharField('Raca', max_length=10)
     color = models.CharField('Cor', max_length=10)
 
-    weight_value = models.PositiveIntegerField('Peso',  default= 0.0)
+    weight_value = models.PositiveIntegerField('Peso',  default= 0)
     weight_unit = models.CharField('Unidade de Peso', max_length=10, choices=[
         ('gramas', 'Gramas'),
         ('quilos', 'Quilos'),
     ], default='gramas')
 
-    height_value = models.PositiveIntegerField('Altura', default= 0.0)
+    height_value = models.PositiveIntegerField('Altura', default= 0)
     height_unit = models.CharField('Unidade de Altura', max_length=11, choices=[
         ('centimetros', 'Centímetros'),
         ('metros', 'Metros'),

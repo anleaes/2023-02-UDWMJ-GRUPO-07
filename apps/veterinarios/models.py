@@ -6,7 +6,7 @@ class Veterinario(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     name = models.CharField('Nome', max_length=50)
     crm = models.CharField('Crm', max_length=15) 
-    register_date = models.DateField('Data')
+    register_date = models.CharField('Data', max_length=10)
     
     class Meta:
         verbose_name = 'Veterinario'

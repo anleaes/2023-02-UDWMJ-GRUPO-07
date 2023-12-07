@@ -13,18 +13,28 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    var weightInput = document.getElementById("id_weight");
+var weight_valueInput = document.getElementById('id_weight_value');
 
-    weightInput.addEventListener("input", function () {
-        weightInput.value = weightInput.value.replace(/\D/g, "");
-    });
+
+weight_valueInput.addEventListener('input', function() {
+
+    var inputValue = weight_valueInput.value;
+
+
+    if (inputValue.length > 2) {
+        weight_valueInput.value = inputValue.slice(0, 2);
+    }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    var heightInput = document.getElementById("id_height");
+var height_valueInput = document.getElementById('id_height_value');
 
-    heightInput.addEventListener("input", function () {
-        heightInput.value = heightInput.value.replace(/\D/g, "");
-    });
+
+height_valueInput.addEventListener('input', function() {
+
+    var inputValue = height_valueInput.value;
+
+
+    if (inputValue.length > 2) {
+        height_valueInput.value = inputValue.slice(0, 2);
+    }
 });
