@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AnimalForm
 from .models import Animal
+from ongs.models import Ong
 
 # Create your views here.
 
@@ -44,3 +45,12 @@ def delete_animal(request, id_animal):
     animal = Animal.objects.get(id=id_animal)
     animal.delete()
     return redirect('animais:list_animais')
+
+def search_animais(request):
+    template_name = 'animais/list_animais.html'
+    query = request.GET.get('query')
+    animais = Animal.objects.filter(name__icontains=query)
+    context = {
+        'animais': animais,
+    }
+    return render(request,template_name, context)
