@@ -32,7 +32,7 @@ body{
     transition: .3s;
 }
 
-#dropdown01, #dropdown02, #dropdown03, #dropdown04, #dropdown05, #dropdown06, #dropdown07{
+#dropdown01, #dropdown02, #dropdown03, #dropdown04, #dropdown05, #dropdown06, #dropdown07, #dropdown08{
     font-size: 20px;
     text-shadow: 1px 1px 0px var(--cor_sombra);
     color: var(--cor_secundaria);
