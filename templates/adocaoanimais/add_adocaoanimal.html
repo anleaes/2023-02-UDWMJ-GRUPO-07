@@ -18,18 +18,10 @@
                 <form action="" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                   <label class="label_txt" for="{{ form.animal.id_for_label }}">Nome do animal</label>
+                   <label class="label_txt" for="{{ form.animal.id_for_label }}">Dados do Animal</label>
                    {{ form.animal|add_class:"form-control campotxt-style" }}
                 </div>
-                <div class="form-group">
-                    <label class="label_txt" for="{{ form.animal.id_for_label }}">Espécie</label>
-                    {{ form.animal|add_class:"form-control campotxt-style" }}
-                 </div>
-                <div class="form-group">
-                    <label class="label_txt" for="{{ form.adoption.id_for_label }}">Status</label>
-                    {{ form.adoption|add_class:"form-control campotxt-style" }}
-                 </div>
-                 <button id="botao_salvar" type="submit" class="btn btn-primary">Salvar</button>       
+                <button id="botao_salvar" type="submit" class="btn btn-primary">Salvar</button>       
                 </form>
             </div>
         </div>

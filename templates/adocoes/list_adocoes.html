@@ -23,7 +23,6 @@
                     <th scope="col">#</th>
                     <th scope="col">Data</th>
                     <th scope="col">Hora</th>
-                    <th scope="col">Status</th>
                     <th scope="col">Adotante</th>
                     </tr>
                 </thead>
@@ -33,7 +32,6 @@
                             <th id="num" scope="row">{{ adocao.id }}</th>
                             <td>{{ adocao.date }}</td>
                             <td>{{ adocao.time }}</td>
-                            <td>{{ adocao.status }}</td>
                             <td>{{ adocao.adopter }}</td>
                             <td>
                                 <a href="{% url 'adocoes:edit_adocao' adocao.id %}" class="btn btn-primary btn-sm">Editar</a>
