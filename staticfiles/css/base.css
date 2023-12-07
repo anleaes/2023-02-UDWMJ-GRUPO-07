@@ -62,6 +62,33 @@ a:hover{
     transition: 0.3s;
 }
 
+#barra_buscar{
+    margin-left: 40px;
+    
+}
+#campo_buscar{
+    color: var(--cor_branco);
+    background-color: var(--cor_fundo_secundaria);
+    border: solid 1px var(--cor_amarelo);
+}
+
+#campo_buscar::placeholder{
+    color: var(--cor_branco);
+}
+
+#botao_buscar{
+    margin-left: 20px;
+    border: 1px solid var(--cor_amarelo);
+    color: var(--cor_branco);
+}
+
+#botao_buscar:hover{
+    background-color: var(--cor_principal);
+    color: var(--cor_branco);
+    border: 1px solid var(--cor_branco);
+    transition: .2s;
+}
+
 h5{
     color: var(--cor_branco); 
     text-align: center; 
