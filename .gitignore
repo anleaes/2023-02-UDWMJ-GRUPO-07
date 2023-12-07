@@ -12,8 +12,8 @@ db.sqlite3
 /apps/adotantes/migrations/__pycache__/*
 /apps/adocoes/__pycache__/*
 /apps/adocoes/migrations/__pycache__/*
-/apps/adocao_animal/__pycache__/*
-/apps/adocao_animal/migrations/__pycache__/*
+/apps/adocaoanimais/__pycache__/*
+/apps/adocaoanimais/migrations/__pycache__/*
 /apps/animais/__pycache__/*
 /apps/animais/migrations/__pycache__/*
 /apps/atendimentos/__pycache__/*
