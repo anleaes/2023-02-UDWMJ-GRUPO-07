@@ -14,7 +14,7 @@ def add_doador(request):
             f = form.save(commit=False)
             f.save()
             form.save_m2m()
-            return redirect('doadores:list_doadores')
+            return redirect('animais:add_animal')
     form = DoadorForm()
     context['form'] = form
     return render(request, template_name, context)
