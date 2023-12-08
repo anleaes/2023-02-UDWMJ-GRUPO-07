@@ -18,9 +18,9 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('contas/', include('accounts.urls', namespace='accounts')),
     path('adocaoanimais/', include('adocaoanimais.urls', namespace='adocaoanimais')),
     path('adocoes/', include('adocoes.urls', namespace='adocoes')),
     path('atendimentos/', include('atendimentos.urls', namespace='atendimentos')),

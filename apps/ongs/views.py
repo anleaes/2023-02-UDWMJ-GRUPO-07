@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import OngForm
 from .models import Ong
-
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+
+@login_required(login_url='/contas/login/')
 def add_ong(request):
     template_name = 'ongs/add_ong.html'
     context = {}
@@ -19,6 +21,7 @@ def add_ong(request):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def list_ongs(request):
     template_name = 'ongs/list_ongs.html'
     ongs = Ong.objects.filter()
@@ -27,6 +30,7 @@ def list_ongs(request):
     }
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def edit_ong(request, id_ong):
     template_name = 'ongs/add_ong.html'
     context ={}
@@ -40,6 +44,7 @@ def edit_ong(request, id_ong):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def delete_ong(request, id_ong):
     ong = Ong.objects.get(id=id_ong)
     ong.delete()

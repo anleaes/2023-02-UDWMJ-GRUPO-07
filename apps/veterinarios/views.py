@@ -2,8 +2,11 @@ from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import VeterinarioForm
 from .models import Veterinario
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+
+@login_required(login_url='/contas/login/')
 def add_veterinario(request):
     template_name = 'veterinarios/add_veterinario.html'
     context = {}
@@ -18,6 +21,7 @@ def add_veterinario(request):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def list_veterinarios(request):
     template_name = 'veterinarios/list_veterinarios.html'
     veterinarios = Veterinario.objects.filter()
@@ -26,6 +30,7 @@ def list_veterinarios(request):
     }
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def edit_veterinario(request, id_veterinario):
     template_name = 'veterinarios/add_veterinario.html'
     context ={}
@@ -39,6 +44,7 @@ def edit_veterinario(request, id_veterinario):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def delete_veterinario(request, id_veterinario):
     veterinario = Veterinario.objects.get(id=id_veterinario)
     veterinario.delete()
