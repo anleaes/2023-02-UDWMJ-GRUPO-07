@@ -35,11 +35,6 @@ class Animal(models.Model):
         ('centimetros', 'Centímetros'),
         ('metros', 'Metros'),
     ], default= 'metros')
-    STATUS_CHOICES = [
-        ('disponivel', 'Disponível'),
-        ('adotado', 'Adotado'),
-    ]
-    status = models.CharField('Status', max_length=10, choices=STATUS_CHOICES, default='disponivel')
     ong = models.ForeignKey(Ong, on_delete=models.CASCADE, default=1)
     donator = models.ForeignKey(Doador, on_delete=models.CASCADE, default=1)
 
@@ -61,4 +56,4 @@ class Animal(models.Model):
         ordering =['id']
         
     def __str__(self):
-        return "%s - %s - %s" % (self.name, self.specie, self.status)
+        return "%s - %s - %s - %s - %s" % (self.name, self.specie, self.sex, self.race, self.ong)

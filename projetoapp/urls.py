@@ -21,7 +21,6 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contas/', include('accounts.urls', namespace='accounts')),
-    path('adocaoanimais/', include('adocaoanimais.urls', namespace='adocaoanimais')),
     path('adocoes/', include('adocoes.urls', namespace='adocoes')),
     path('atendimentos/', include('atendimentos.urls', namespace='atendimentos')),
     path('animais/', include('animais.urls', namespace='animais')),

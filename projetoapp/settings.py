@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'animais.apps.AnimaisConfig',
     'atendimentos.apps.AtendimentosConfig',
     'adocoes.apps.AdocoesConfig',
-    'adocaoanimais.apps.AdocaoanimaisConfig',
     'accounts.apps.AccountsConfig',
 ]
 

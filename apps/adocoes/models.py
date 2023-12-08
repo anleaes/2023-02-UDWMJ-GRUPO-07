@@ -1,14 +1,15 @@
 from django.db import models
 from adotantes.models import Adotante
-
+from datetime import datetime
+from animais.models import Animal
 # Create your models here.
 
 class Adocao(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    date = models.CharField('Data', max_length=10)
-    time = models.CharField('Hora', max_length=5)
-    adopter = models.ForeignKey(Adotante, on_delete=models.CASCADE, default=4)
+    date_hour = models.DateTimeField('Data e Hora da Adoção', default=datetime.now)
+    adopter = models.ForeignKey(Adotante, on_delete=models.CASCADE, default=1)
+    animal = models.ForeignKey(Animal, on_delete=models.CASCADE, default=0)
     
     class Meta:
         verbose_name = 'Adocao'
@@ -16,4 +17,4 @@ class Adocao(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return self.date
+        return self.date_hour
