@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AnimalForm
 from .models import Animal
 from ongs.models import Ong
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def add_animal(request):
@@ -20,6 +20,7 @@ def add_animal(request):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def list_animais(request):
     template_name = 'animais/list_animais.html'
     animais = Animal.objects.filter()
@@ -28,6 +29,7 @@ def list_animais(request):
     }
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def edit_animal(request, id_animal):
     template_name = 'animais/add_animal.html'
     context ={}
@@ -41,6 +43,7 @@ def edit_animal(request, id_animal):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def delete_animal(request, id_animal):
     animal = Animal.objects.get(id=id_animal)
     animal.delete()

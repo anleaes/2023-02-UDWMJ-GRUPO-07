@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AdocaoanimalForm
 from .models import Adocaoanimal
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def add_adocaoanimal(request):
@@ -18,6 +19,7 @@ def add_adocaoanimal(request):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def list_adocaoanimais(request):
     template_name = 'adocaoanimais/list_adocaoanimais.html'
     adocaoanimais = Adocaoanimal.objects.filter()
@@ -26,6 +28,7 @@ def list_adocaoanimais(request):
     }
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def edit_adocaoanimal(request, id_adocaoanimal):
     template_name = 'adocaoanimais/add_adocaoanimal.html'
     context ={}
@@ -39,6 +42,7 @@ def edit_adocaoanimal(request, id_adocaoanimal):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def delete_adocaoanimal(request, id_adocaoanimal):
     adocaoanimal = Adocaoanimal.objects.get(id=id_adocaoanimal)
     adocaoanimal.delete()

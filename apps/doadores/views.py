@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import DoadorForm
 from .models import Doador
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def add_doador(request):
@@ -18,6 +19,7 @@ def add_doador(request):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def list_doadores(request):
     template_name = 'doadores/list_doadores.html'
     doadores = Doador.objects.filter()
@@ -26,6 +28,7 @@ def list_doadores(request):
     }
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def edit_doador(request, id_doador):
     template_name = 'doadores/add_doador.html'
     context ={}
@@ -39,6 +42,7 @@ def edit_doador(request, id_doador):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def delete_doador(request, id_doador):
     doador = Doador.objects.get(id=id_doador)
     doador.delete()

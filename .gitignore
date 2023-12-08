@@ -18,3 +18,5 @@ db.sqlite3
 /apps/animais/migrations/__pycache__/*
 /apps/atendimentos/__pycache__/*
 /apps/atendimentos/migrations/__pycache__/*
+/apps/accounts/__pycache__/*
+/apps/accounts/migrations/__pycache__/*

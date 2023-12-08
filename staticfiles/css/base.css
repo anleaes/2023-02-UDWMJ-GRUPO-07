@@ -23,7 +23,7 @@
 *{
     font-family: "Poppins", Helvetica, sans-serif;
 }
-body{
+#corpo{
     background-color: var(--cor_fundo);
 }
 
@@ -33,12 +33,21 @@ body{
     transition: .3s;
 }
 
-#dropdown01, #dropdown02, #dropdown03, #dropdown04, #dropdown05, #dropdown06, #dropdown07, #dropdown08{
+#dropdown01, #dropdown02, #dropdown03, #dropdown04, #dropdown05, #dropdown06, #dropdown07{
     font-size: 20px;
     text-shadow: 2px 2px 0px var(--cor_sombra);
     color: var(--cor_amarelo);
 }
 
+#dropdown08{
+    font-size: 15px;
+    text-shadow: 2px 2px 0px var(--cor_sombra);
+    color: var(--cor_amarelo);
+    border: 2px solid var(--cor_branco);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 50px;
+}
 .dropdown-item{
     color: var(--cor_branco);
     transition: .3s;
@@ -93,6 +102,7 @@ h5{
     color: var(--cor_branco); 
     text-align: center; 
     font-size: 32px;
+    font-weight: bolder;
 }
 
 .label_txt{
@@ -359,4 +369,57 @@ p{
     border: none;
     outline: 2px solid var(--cor_principal);
     color: var(--cor_secundaria);
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+/*estilo do login*/
+
+#h1_login{
+    color: var(--cor_branco);
+    font-weight: bolder;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+#username{
+    background-color: var(--cor_fundo_secundaria);
+    border-radius: 10px;
+}
+
+#username:focus{
+    color: var(--cor_branco);
+    background-color: var(--cor_preto);
+    transition: 0.5s;
+}
+
+#password{
+    background-color: var(--cor_fundo_secundaria);
+    border-radius: 10px;
+}
+
+#password:focus{
+    color: var(--cor_branco);
+    background-color: var(--cor_preto);
+    transition: 0.5s;
+}
+
+#botao_login{
+    background-color: var(--cor_principal_degrade);
+    border: 1px solid var(--cor_secundaria);
+}
+
+#botao_login:hover{
+    background-color: var(--cor_principal);
+    transition: .3s;
+}
+
+#a_login{
+    color: var(--cor_principal_degrade);
+    text-decoration: none;
+}
+
+#a_login:hover{
+    color: var(--cor_principal);
+    transition: .3s;
 }

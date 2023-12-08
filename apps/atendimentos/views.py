@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AtendimentoForm
 from .models import Atendimento
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+@login_required(login_url='/contas/login/')
 def add_atendimento(request):
     template_name = 'atendimentos/add_atendimento.html'
     context = {}
@@ -19,6 +21,7 @@ def add_atendimento(request):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def list_atendimentos(request):
     template_name = 'atendimentos/list_atendimentos.html'
     atendimentos = Atendimento.objects.filter()
@@ -27,6 +30,7 @@ def list_atendimentos(request):
     }
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def edit_atendimento(request, id_atendimento):
     template_name = 'atendimentos/add_atendimento.html'
     context ={}
@@ -40,6 +44,7 @@ def edit_atendimento(request, id_atendimento):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def delete_atendimento(request, id_atendimento):
     atendimento = Atendimento.objects.get(id=id_atendimento)
     atendimento.delete()

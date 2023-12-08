@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AdotanteForm
 from .models import Adotante
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -19,6 +20,7 @@ def add_adotante(request):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def list_adotantes(request):
     template_name = 'adotantes/list_adotantes.html'
     adotantes = Adotante.objects.filter()
@@ -27,6 +29,7 @@ def list_adotantes(request):
     }
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def edit_adotante(request, id_adotante):
     template_name = 'adotantes/add_adotante.html'
     context ={}
@@ -40,6 +43,7 @@ def edit_adotante(request, id_adotante):
     context['form'] = form
     return render(request, template_name, context)
 
+@login_required(login_url='/contas/login/')
 def delete_adotante(request, id_adotante):
     adotante = Adotante.objects.get(id=id_adotante)
     adotante.delete()
