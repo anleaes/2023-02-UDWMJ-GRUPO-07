@@ -68,13 +68,6 @@
                     <a class="dropdown-item" href="{% url 'adocoes:list_adocoes' %}">Lista de Adoções</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expand="false">Adoção animal</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown05">
-                    <a class="dropdown-item" href="{% url 'adocaoanimais:add_adocaoanimal' %}">Cadastrar Adoção</a>
-                    <a class="dropdown-item" href="{% url 'adocaoanimais:list_adocaoanimais' %}">Lista de Adoções</a>
-                </div>
-            </li>
             <form id="barra_buscar" action="{% url 'animais:search_animais' %}"  method="GET" class="form-inline my-2 my-md-0">
                 <input id="campo_buscar" class="form-control" name="query" type="text" placeholder="Nome do animal" aria-label="Buscar">
                 <button id="botao_buscar" class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>

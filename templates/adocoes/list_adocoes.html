@@ -21,18 +21,18 @@
                 <thead>
                     <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Data</th>
-                    <th scope="col">Hora</th>
+                    <th scope="col">Data e Hora</th>
                     <th scope="col">Adotante</th>
+                    <th scope="col">Nome Animal - Espécie - Sexo - Raça - Ong</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for adocao in adocoes %}
                         <tr>
                             <th id="num" scope="row">{{ adocao.id }}</th>
-                            <td>{{ adocao.date }}</td>
-                            <td>{{ adocao.time }}</td>
+                            <td>{{ adocao.date_hour }}</td>
                             <td>{{ adocao.adopter }}</td>
+                            <td>{{ adocao.animal }}</td>
                             <td>
                                 <a href="{% url 'adocoes:edit_adocao' adocao.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>
