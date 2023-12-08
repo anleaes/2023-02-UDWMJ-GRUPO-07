@@ -9,20 +9,20 @@ class Animal(models.Model):
     update_on = models.DateTimeField(auto_now=True)
     name = models.CharField('Nome', max_length=50)
     SEX_CHOICES = [
-        ('macho', 'Macho'),
-        ('femea', 'Fêmea'),
+        ('Macho', 'Macho'),
+        ('Fêmea', 'Fêmea'),
     ]
-    sex = models.CharField('Sexo', max_length=5, choices=SEX_CHOICES, default='macho')
+    sex = models.CharField('Sexo', max_length=5, choices=SEX_CHOICES, default='Macho')
     years_old_value = models.PositiveIntegerField('Idade', default= 0)
     years_old_unit = models.CharField('Unidade de Idade', max_length=10, choices=[
         ('anos', 'Anos'),
         ('meses', 'Meses'),
     ], default='meses')
     SPECIE_CHOICES = [
-        ('gato', 'Gato'),
-        ('cachorro', 'Cachorro'),
+        ('Gato', 'Gato'),
+        ('Cachorro', 'Cachorro'),
     ] 
-    specie = models.CharField('Especie', max_length=10, choices=SPECIE_CHOICES, default='cachorro')
+    specie = models.CharField('Especie', max_length=10, choices=SPECIE_CHOICES, default='Cachorro')
     race = models.CharField('Raca', max_length=10)
     color = models.CharField('Cor', max_length=10)
     weight_value = models.PositiveIntegerField('Peso',  default= 0)
