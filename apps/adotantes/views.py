@@ -15,7 +15,7 @@ def add_adotante(request):
             f = form.save(commit=False)
             f.save()
             form.save_m2m()
-            return redirect('adotantes:list_adotantes')
+            return redirect('adocoes:add_adocao')
     form = AdotanteForm()
     context['form'] = form
     return render(request, template_name, context)
